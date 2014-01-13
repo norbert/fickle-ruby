@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.test_files    = s.files.grep(/^test\//)
   s.require_paths = ["lib"]
 
-  s.add_dependency 'faraday'
-  s.add_dependency 'multi_json'
+  s.add_dependency 'faraday', '~> 0.8.8'
+  s.add_dependency 'multi_json', '~> 1.8'
   s.add_development_dependency 'rake'
 end
