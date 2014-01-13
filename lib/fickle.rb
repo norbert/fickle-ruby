@@ -40,14 +40,8 @@ module Fickle
       true
     end
 
-    def validate
-      response = post('/validate')
-      decode(response)
-    end
-
-    def predict(samples, probabilities = false)
+    def predict(samples)
       path = '/predict'
-      path += '/probabilities' if probabilities
 
       response = post(path, encode(samples))
       decode(response)
@@ -67,11 +61,11 @@ module Fickle
     end
 
     def encode(body)
-      MultiJson.encode(body)
+      MultiJson.dump(body)
     end
 
     def decode(response)
-      MultiJson.decode(response.body)
+      MultiJson.load(response.body)
     end
   end
 end

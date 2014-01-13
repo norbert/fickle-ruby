@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "fickle-ruby"
-  s.version     = "0.0.1"
+  s.version     = "1.0.0"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Norbert Crombach"]
   s.email       = ["norbert.crombach@primetheory.org"]
